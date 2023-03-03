@@ -2,6 +2,13 @@ name: Trigger auto deployment
 on:
   # 手動実行用トリガー
   workflow_dispatch:      
+  # Add a trigger
+  # 自動実行用トリガー
+  push:
+    branches: 
+      [ main ]
+    paths:
+    - '**'
 # Add env
 env:
   CONTAINER_REGISTRY: handson01cicde27bdvjgc67kw.azurecr.io # CICD用に作成したRGに存在しているAzure Container Registry のドメイン (~.azurecr.io) をこちらに設定
